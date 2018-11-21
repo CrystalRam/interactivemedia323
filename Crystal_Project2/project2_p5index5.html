@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html></html>
+<head>
+	<title></title>
+</head>
+<body></body>
+	<style>
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+body {
+    margin: 0;
+    width: 100%;;
+    font-family: "Montserrat";
+}
+
+.initial {
+    z-index: 1000;
+    position: fixed;
+    margin: inherit;
+    width: inherit;
+    height: 100%;
+    animation-name: out;
+    animation-delay: 3.8s;
+    animation-fill-mode: forwards;
+}
+
+.curtain-holder {
+    position: fixed;
+    margin: inherit;
+    width: inherit;
+    height: inherit;
+}
+
+.curtain {
+    position: fixed;
+    margin: inherit;
+    padding: 0;
+    width: inherit;
+    height: inherit;
+    list-style: none;
+    display: inline-flex;
+}
+
+.plank {
+    margin: inherit;
+    padding: inherit;
+    width: 25vw;
+    height: inherit;
+    background: #ffcc00;
+    animation-name: curtain-up;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.75, 0.30, 0.75, 0.80);
+}
+
+#plank-1 {
+    animation-delay: 2.9s;
+}
+#plank-2 {
+    animation-delay: 3s;
+}
+#plank-3 {
+    animation-delay: 3.1s;
+}
+#plank-4 {
+    animation-delay: 3.3s;
+}
+
+.description-holder {
+    position: fixed;
+    margin: inherit;
+    width: inherit;
+}
+
+.description {
+    margin: inherit;
+    margin-top: 45vh;
+    width: inherit;
+    text-align: center;
+    color: #996600;
+    font-size: 24px;
+}
+
+.property {
+    margin: 0;
+    margin-left: 10px;
+    margin-right: 10px;
+    animation-name: curtain-up-down;
+    opacity: 0;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+#designer {
+    animation-delay: 0.4s;
+}
+#photographer {
+    animation-delay: 0.8s;
+}
+
+@keyframes curtain-up-down {
+    0% {
+        opacity: 0;
+    }
+    40% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes curtain-up {
+    from {
+        height: 100%;
+    }
+    to {
+        height: 0%;
+    }
+}
+
+@keyframes out {
+    from {
+        visibility: visible;
+    }
+    to {
+        visibility: hidden;
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+</style> 
+<div class="initial">
+    <div class="curtain-holder">
+        <ul class="curtain">
+            <li id="plank-1" class="plank"></li>
+            <li id="plank-2" class="plank"></li>
+            <li id="plank-3" class="plank"></li>
+            <li id="plank-4" class="plank"></li>
+        </ul>
+      </div>
+      <div class="description-holder">
+          <p class="description">
+              <span id="developer" class="property">Art</span>
+              <span id="designer" class="property">Inspiration I have none left</span>
+              <span id="photographer" class="property">Its all gone </span>
+              <span id="photographer" class="property">gone gone</span>
+          </p>
+    </div>
+</div>
+			
